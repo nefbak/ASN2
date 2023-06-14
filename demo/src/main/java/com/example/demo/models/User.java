@@ -9,28 +9,51 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int uid;
     private String name;
-    private String password;
+    private String haircolor;
     private int weight;
+    private int height;
+    private float gpa;
+
 
     public User() {
     }
-    public User(String name, String password, int weight) {
+   
+    public User(String name, String haircolor, int weight, int height, float gpa) {
         this.name = name;
-        this.password = password;
+        this.haircolor = haircolor;
         this.weight = weight;
-
+        this.height = height;
+        this.gpa = gpa;
     }
+
+    
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public float getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(float gpa) {
+        this.gpa = gpa;
+    }
+
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public String getPassword() {
-        return password;
+    public String getHaircolor() {
+        return haircolor;
     }
-    public void setPassword(String password) {
-        this.password = password;
+    public void setHaircolor(String password) {
+        this.haircolor = password;
     }
     public int getWeight() {
         return weight;
